@@ -62,7 +62,7 @@ function initThemeToggle() {
   const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
   const updateLogos = (isDark) => {
-    const logos = document.querySelectorAll('.loader-logo-img, .brand-logo-img, .footer-brand-logo, .auth-logo-img');
+    const logos = document.querySelectorAll('.loader-logo-img, .brand-logo-img, .footer-brand-logo, .auth-logo-img, .auth-brand-icon');
     logos.forEach(img => {
       img.src = isDark ? 'assets/images/icons/logo-bright.png' : 'assets/images/icons/logo.png';
     });
