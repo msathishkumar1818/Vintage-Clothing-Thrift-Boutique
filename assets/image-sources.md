@@ -96,6 +96,7 @@
 | `assets/images/about/conservation-accessories-leather.jpg` | About | Section 5 (Conservation Mosaic Leather) | Unsplash | https://unsplash.com/photos/handcrafted-leather-apparel-1534452203293 | Unsplash Free License | Unsplash Contributor | Yes | 2026-09-24 |
 | `assets/images/about/conservation-apparel-rack.jpg` | About | Section 5 (Conservation Mosaic Apparel Rack) | Unsplash | https://unsplash.com/photos/vintage-apparel-steamer-rack-1551232864 | Unsplash Free License | Unsplash Contributor | Yes | 2026-09-24 |
 | `assets/images/about/conservation-garment-craft.jpg` | About | Section 5 (Conservation Mosaic Textile Craft) | Unsplash | https://unsplash.com/photos/archival-textile-restoration-1479064555 | Unsplash Free License | Unsplash Contributor | Yes | 2026-09-24 |
+| `assets/images/backgrounds/auth-collector-vault.jpg` | Login | Left Showcase Panel | Generated / Studio Asset | Boutique Lifestyle Archive Shoot | Commercial Vintage License | Vintage Clothing & Thrift Boutique | Yes | 2026-09-24 |
 
 
 

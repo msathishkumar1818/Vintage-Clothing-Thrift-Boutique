@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collector Vault Login &amp; Register | Vintage Clothing &amp; Thrift Boutique</title>
+  <meta name="description"
+    content="Sign in to your Vintage Clothing &amp; Thrift Boutique collector account. Access private secret drops, archival order histories, and bespoke styling reservations.">
+
+  <!-- Favicon (High Contrast Vector + PNG) -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/icons/favicon.png">
+
+  <!-- External Stylesheets (Zero inline CSS) -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body class="auth-split-body">
+
+  <main class="auth-split-container">
+
+    <!-- ====================================================================
+         LEFT PANEL: LIFESTYLE IMAGE & COLLECTOR PORTAL SHOWCASE
+         ==================================================================== -->
+    <section class="auth-split-left" id="auth-showcase">
+      <img src="assets/images/backgrounds/auth-collector-vault.jpg" alt="Two collectors in authentic vintage knitwear and corduroy tailored jacket inside the boutique archive"
+        class="auth-left-bg">
+      <div class="auth-left-overlay"></div>
+
+      <!-- Top Home Return Shortcut -->
+
+
+      <!-- Bottom Pinned Hero Content -->
+      <div class="auth-left-content">
+
+        <!-- Portal Pill Badge -->
+        <div class="auth-portal-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5m14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1z" />
+          </svg>
+          <span>COLLECTOR PORTAL</span>
+        </div>
+
+        <!-- Main Headline -->
+        <h1 class="auth-left-title">
+          Your Front-Row Seat to Europe &amp; Japan&rsquo;s Rarest Relics
+        </h1>
+
+        <!-- Subtitle Paragraph -->
+        <p class="auth-left-desc">
+          Access private vault previews, weekly Friday secret drops, authenticated provenance certificates, and bespoke
+          styling consultations before public release.
+        </p>
+
+        <!-- Divider Line & Metric Stats -->
+        <div class="auth-metrics-divider"></div>
+        <div class="auth-metrics-row">
+          <div class="auth-metric-item">
+            <span class="auth-metric-val">15,000+</span>
+            <span class="auth-metric-lbl">Active Collectors</span>
+          </div>
+          <div class="auth-metric-separator"></div>
+          <div class="auth-metric-item">
+            <span class="auth-metric-val">24 Hrs</span>
+            <span class="auth-metric-lbl">Early Drop Access</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         RIGHT PANEL: AUTHENTICATION PORTAL (LOGIN / REGISTER)
+         ==================================================================== -->
+    <section class="auth-split-right" id="auth-portal">
+      <div class="auth-form-card">
+
+        <!-- Top Row: Brand Header & Mode Controls -->
+        <div class="auth-header-row">
+
+          <!-- Brand Logo and Identity -->
+          <a href="index.html" class="auth-brand-identity" aria-label="Vintage Clothing &amp; Thrift Boutique Home">
+            <img src="assets/images/icons/logo.png" alt="Vintage Boutique Logo" class="auth-brand-icon" width="46"
+              height="46">
+            <div class="auth-brand-copy">
+              <span class="auth-brand-heading">VINTAGE</span>
+              <span class="auth-brand-subheading">CLOTHING &amp; THRIFT BOUTIQUE</span>
+            </div>
+          </a>
+
+          <!-- Controls: Dark Mode Toggle & RTL Toggle -->
+          <div class="auth-controls-group">
+            <!-- Dark Mode Toggle Button -->
+            <button type="button" class="ctrl-btn theme-toggle-btn auth-theme-toggle" aria-label="Toggle Dark Mode">
+              <svg class="ctrl-icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+              <svg class="ctrl-icon sun-icon" style="display: none;" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+            </button>
+
+            <!-- RTL Toggle Button -->
+            <button type="button" class="ctrl-btn rtl-toggle-btn auth-rtl-toggle"
+              aria-label="Toggle Layout Direction (RTL/LTR)">
+              <span class="rtl-label">RTL</span>
+            </button>
+          </div>
+
+        </div>
+
+        <!-- 1. SIGN IN VIEW (Default) -->
+        <div class="auth-view-panel" id="view-signin">
+
+          <div class="auth-welcome-block">
+            <h2 class="auth-welcome-title">Welcome Back</h2>
+            <p class="auth-welcome-desc">Enter your credentials to access your tickets, archive, and reservations.</p>
+          </div>
+
+          <form class="auth-actual-form" id="auth-signin-form"
+            onsubmit="event.preventDefault(); alert('Welcome back to your Vintage Boutique Collector Vault!');">
+
+            <!-- Email Field -->
+            <div class="auth-field-group">
+              <label class="auth-field-label" for="signin-email">Email Address</label>
+              <input type="email" id="signin-email" required class="auth-field-input"
+                placeholder="alex.patron@vintagevault.com">
+            </div>
+
+            <!-- Password Field with Forgot Link & Eye Toggle -->
+            <div class="auth-field-group">
+              <div class="auth-label-split">
+                <label class="auth-field-label" for="signin-password">Password</label>
+                <a href="javascript:void(0)" class="auth-forgot-link"
+                  onclick="alert('Password recovery link has been dispatched to your email.');">Forgot Password?</a>
+              </div>
+              <div class="auth-input-wrapper">
+                <input type="password" id="signin-password" required class="auth-field-input"
+                  placeholder="••••••••••••••••">
+                <button type="button" class="auth-password-toggle" id="toggle-password-btn"
+                  aria-label="Show or hide password">
+                  <svg class="eye-open" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  <svg class="eye-closed" style="display: none;" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24">
+                    </path>
+                    <line x1="1" y1="1" x2="23" y2="23"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Remember Me Row -->
+            <div class="auth-checkbox-row">
+              <input type="checkbox" id="signin-remember" checked class="auth-custom-checkbox">
+              <label for="signin-remember" class="auth-checkbox-text">Remember me for 30 days</label>
+            </div>
+
+            <!-- Primary Action Button -->
+            <button type="submit" class="auth-primary-submit">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+              <span>Sign In to Account</span>
+            </button>
+
+            <!-- Divider -->
+            <div class="auth-or-divider">
+              <span>OR CONTINUE WITH</span>
+            </div>
+
+            <!-- Social Logins Row -->
+            <div class="auth-social-buttons">
+              <button type="button" class="auth-social-pill" onclick="alert('Google Authentication connected!');">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z" />
+                </svg>
+                <span>Google</span>
+              </button>
+              <button type="button" class="auth-social-pill" onclick="alert('Apple ID Authentication connected!');">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.87c.63-.78 1.06-1.86.94-2.95-.91.04-2.02.61-2.67 1.39-.56.66-1.05 1.76-.92 2.82 1.02.08 2.02-.48 2.65-1.26z" />
+                </svg>
+                <span>Apple</span>
+              </button>
+            </div>
+
+            <!-- Footer Switch Link -->
+            <p class="auth-footer-prompt">
+              Don&rsquo;t have a collector account?
+              <button type="button" class="auth-switch-btn" id="show-signup-btn">Sign up here</button>
+            </p>
+
+          </form>
+
+        </div>
+
+        <!-- 2. CREATE ACCOUNT VIEW (Toggleable) -->
+        <div class="auth-view-panel" id="view-signup" style="display: none;">
+
+          <div class="auth-welcome-block">
+            <h2 class="auth-welcome-title">Create Account</h2>
+            <p class="auth-welcome-desc">Join the archival collector circle for 24h drop access and private tailoring
+              holds.</p>
+          </div>
+
+          <form class="auth-actual-form" id="auth-signup-form"
+            onsubmit="event.preventDefault(); alert('Account registered! Welcome to the Vintage Boutique Collector Vault.');">
+
+            <div class="auth-field-group">
+              <label class="auth-field-label" for="signup-name">Full Name</label>
+              <input type="text" id="signup-name" required class="auth-field-input" placeholder="Elena Rostova">
+            </div>
+
+            <div class="auth-field-group">
+              <label class="auth-field-label" for="signup-email">Email Address</label>
+              <input type="email" id="signup-email" required class="auth-field-input"
+                placeholder="elena.collector@vintagevault.com">
+            </div>
+
+            <div class="auth-field-group">
+              <label class="auth-field-label" for="signup-password">Create Password</label>
+              <input type="password" id="signup-password" required class="auth-field-input"
+                placeholder="At least 8 characters">
+            </div>
+
+
+
+            <div class="auth-checkbox-row">
+              <input type="checkbox" id="signup-terms" required class="auth-custom-checkbox">
+              <label for="signup-terms" class="auth-checkbox-text">I agree to the Boutique Collector Terms &amp; Privacy
+                Policy</label>
+            </div>
+
+            <button type="submit" class="auth-primary-submit">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+              <span>Join Collector Archive</span>
+            </button>
+
+            <p class="auth-footer-prompt">
+              Already have a collector account?
+              <button type="button" class="auth-switch-btn" id="show-signin-btn">Sign in here</button>
+            </p>
+
+          </form>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Standalone Interactive Handlers
+    document.addEventListener('DOMContentLoaded', function () {
+      const viewSignIn = document.getElementById('view-signin');
+      const viewSignUp = document.getElementById('view-signup');
+      const showSignUpBtn = document.getElementById('show-signup-btn');
+      const showSignInBtn = document.getElementById('show-signin-btn');
+      const togglePasswordBtn = document.getElementById('toggle-password-btn');
+      const passwordInput = document.getElementById('signin-password');
+
+      if (showSignUpBtn && showSignInBtn && viewSignIn && viewSignUp) {
+        showSignUpBtn.addEventListener('click', function () {
+          viewSignIn.style.display = 'none';
+          viewSignUp.style.display = 'block';
+        });
+
+        showSignInBtn.addEventListener('click', function () {
+          viewSignUp.style.display = 'none';
+          viewSignIn.style.display = 'block';
+        });
+      }
+
+      if (togglePasswordBtn && passwordInput) {
+        togglePasswordBtn.addEventListener('click', function () {
+          const eyeOpen = togglePasswordBtn.querySelector('.eye-open');
+          const eyeClosed = togglePasswordBtn.querySelector('.eye-closed');
+          if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            eyeOpen.style.display = 'none';
+            eyeClosed.style.display = 'block';
+          } else {
+            passwordInput.type = 'password';
+            eyeOpen.style.display = 'block';
+            eyeClosed.style.display = 'none';
+          }
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

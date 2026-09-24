@@ -322,7 +322,7 @@ function initScrollTop() {
 function initAuthModal() {
   const modalOverlay = document.getElementById('auth-modal-overlay');
   const closeBtn = document.getElementById('auth-modal-close-btn');
-  const openButtons = document.querySelectorAll('.open-login-btn, #header-login-btn, #mobile-login-btn');
+  const openButtons = document.querySelectorAll('.open-login-modal-btn');
   const tabLogin = document.getElementById('tab-login-btn');
   const tabRegister = document.getElementById('tab-register-btn');
   const loginForm = document.getElementById('form-login');
