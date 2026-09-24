@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Vault & Archive | Vintage Clothing & Thrift Boutique</title>
+  <meta name="description"
+    content="Explore our rare vintage fashion vault. Museum-grade vintage garments, distressed leather, rare indigo selvedge denim, and private salon fittings.">
+
+  <!-- Favicon (High Contrast Vector + PNG) -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/icons/favicon.png">
+
+  <!-- External Stylesheets (Zero inline CSS) -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+
+  <!-- Branded Page Loader -->
+  <div id="site-loader" aria-hidden="true">
+    <div class="loader-logo-wrap">
+      <div class="loader-spinner"></div>
+      <img src="assets/images/icons/logo.png" alt="Vintage Boutique Loader" class="loader-logo-img">
+    </div>
+    <span class="loader-text">Vintage Boutique</span>
+  </div>
+
+  <!-- Sticky Compact Desktop & Mobile Header -->
+  <header class="site-header" id="site-header">
+    <div class="site-container header-container">
+
+      <!-- Brand Logo + Name + Tagline -->
+      <a href="index.html" class="brand-link" aria-label="Vintage Clothing and Thrift Boutique Home">
+        <img src="assets/images/icons/logo.png" alt="Vintage Clothing & Thrift Boutique Logo" class="brand-logo-img">
+        <div class="brand-text-block">
+          <span class="brand-name">Vintage</span>
+          <span class="brand-tagline">Clothing & Thrift Boutique</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation: Exactly 6 Navigation Items -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <!-- 1. Home with Click-Only Dropdown -->
+        <div class="nav-item-dropdown" id="nav-home-dropdown">
+          <button type="button" class="dropdown-toggle-btn active" aria-expanded="false" aria-haspopup="true">
+            <span>Home</span>
+            <svg class="dropdown-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                clip-rule="evenodd" />
+            </svg>
+          </button>
+          <div class="dropdown-menu" role="menu">
+            <a href="index.html" class="dropdown-item" role="menuitem">Home 1 (Curated Boutique)</a>
+            <a href="home-2.html" class="dropdown-item active" role="menuitem">Home 2 (The Vault & Archive)</a>
+          </div>
+        </div>
+
+        <!-- 2. Shop -->
+        <a href="shop.html" class="nav-link">Shop</a>
+
+        <!-- 3. Sell Your Clothes -->
+        <a href="sell.html" class="nav-link">Sell Your Clothes</a>
+
+        <!-- 4. Styling Tips -->
+        <a href="styling-tips.html" class="nav-link">Styling Tips</a>
+
+        <!-- 5. About (Mandatory) -->
+        <a href="about.html" class="nav-link">About</a>
+
+        <!-- 6. Contact (Directly Visible) -->
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Desktop Header Actions: RTL, Dark Mode, Login Button -->
+      <div class="header-actions">
+        <!-- RTL Toggle -->
+        <button type="button" class="ctrl-btn rtl-toggle-btn" aria-label="Toggle Layout Direction (RTL/LTR)">
+          <span class="rtl-label">RTL</span>
+        </button>
+
+        <!-- Dark Mode Toggle -->
+        <button type="button" class="ctrl-btn theme-toggle-btn" aria-label="Toggle Dark Mode">
+          <svg class="ctrl-icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="ctrl-icon sun-icon" style="display: none;" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- Login Button (Replaces CTA) -->
+        <button type="button" class="header-login-btn open-login-btn" id="header-login-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          <span>Login</span>
+        </button>
+
+        <!-- Mobile Drawer Toggle Trigger -->
+        <button type="button" class="mobile-toggle-btn" id="mobile-menu-open-btn" aria-label="Open Mobile Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Menu Drawer & Overlay -->
+  <div class="mobile-menu-overlay" id="mobile-menu-overlay" aria-hidden="true">
+    <div class="mobile-menu-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu">
+
+      <!-- Drawer Header: Brand Logo, Brand Text, Close Button -->
+      <div class="mobile-drawer-header">
+        <a href="index.html" class="brand-link">
+          <img src="assets/images/icons/logo.png" alt="Vintage Boutique" class="brand-logo-img">
+          <div class="brand-text-block">
+            <span class="brand-name">Vintage</span>
+            <span class="brand-tagline">Clothing & Thrift Boutique</span>
+          </div>
+        </a>
+        <button type="button" class="mobile-close-btn" id="mobile-menu-close-btn" aria-label="Close Mobile Menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation Links -->
+      <ul class="mobile-nav-list">
+        <!-- Home Accordion -->
+        <li class="mobile-accordion" id="mobile-home-accordion">
+          <button type="button" class="mobile-accordion-toggle" id="mobile-home-toggle-btn" aria-expanded="false">
+            <span>Home</span>
+            <svg class="mobile-accordion-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                clip-rule="evenodd" />
+            </svg>
+          </button>
+          <ul class="mobile-submenu">
+            <li><a href="index.html" class="mobile-sub-link">Home 1 (Curated Boutique)</a></li>
+            <li><a href="home-2.html" class="mobile-sub-link active">Home 2 (The Vault & Archive)</a></li>
+          </ul>
+        </li>
+
+        <li><a href="shop.html" class="mobile-nav-link">Shop</a></li>
+        <li><a href="sell.html" class="mobile-nav-link">Sell Your Clothes</a></li>
+        <li><a href="styling-tips.html" class="mobile-nav-link">Styling Tips</a></li>
+        <li><a href="about.html" class="mobile-nav-link">About</a></li>
+        <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Drawer Footer with Theme & Direction Controls and Login -->
+      <div class="mobile-drawer-footer">
+        <div class="mobile-actions-row">
+          <!-- Dark Mode Toggle in Mobile -->
+          <button type="button" class="ctrl-btn theme-toggle-btn" aria-label="Toggle Dark Mode">
+            <svg class="ctrl-icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <svg class="ctrl-icon sun-icon" style="display: none;" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <span class="theme-label-text">Dark Mode</span>
+          </button>
+
+          <!-- RTL Toggle in Mobile -->
+          <button type="button" class="ctrl-btn rtl-toggle-btn" aria-label="Toggle Layout Direction (RTL/LTR)">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="17 1 21 5 17 9"></polyline>
+              <path d="M3 5h18"></path>
+              <polyline points="7 23 3 19 7 15"></polyline>
+              <path d="M21 19H3"></path>
+            </svg>
+            <span class="rtl-label">RTL</span>
+          </button>
+        </div>
+
+        <!-- Login in Mobile Drawer -->
+        <button type="button" class="mobile-login-btn open-login-btn" id="mobile-login-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          <span>Account Login / Sign Up</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT: EXACTLY 6 UNIQUE MAIN CONTENT SECTIONS -->
+  <main id="main-content">
+
+    <!-- ====================================================================
+         SECTION 1: CINEMATIC FULL-BLEED ARCHIVE VAULT HERO
+         ==================================================================== -->
+    <section class="hero-vault-section" id="vault-hero">
+      <img src="assets/images/hero/p12.jpg" alt="Cinematic vintage high-fashion lookbook atmosphere"
+        class="hero-vault-bg">
+      <div class="hero-vault-overlay"></div>
+
+      <div class="site-container">
+        <div class="hero-vault-content">
+          <div class="vault-badge">
+            <span>The Vault Archive &middot; Edition 2026</span>
+          </div>
+          <h1 class="hero-vault-title">Where Garments Become History.</h1>
+          <p class="hero-vault-subtitle">
+            Rare textiles, provenance documentation, and authenticated collector specimens. A deeper look inside our
+            private consignment sanctuary.
+          </p>
+          <div class="vault-hero-actions">
+            <a href="#vault-diptych" class="btn-primary-hero">
+              <span>Explore Vault Specimens</span>
+              <span aria-hidden="true">&darr;</span>
+            </a>
+            <a href="#vip-trunk-show" class="btn-outline-vault">
+              <span>Reserve VIP Fitting</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 2: DIPTYCH DUAL-FOCUS ASYMMETRIC SPREAD
+         ==================================================================== -->
+    <section class="diptych-section" id="vault-diptych">
+      <div class="site-container">
+
+        <div class="diptych-grid">
+          <!-- Left Panel: Leather Trench -->
+          <div class="diptych-panel">
+            <img src="assets/images/sections/p13.jpg" alt="1976 Distressed European biker trench coat"
+              class="diptych-img">
+            <div class="diptych-gradient"></div>
+            <div class="diptych-caption">
+              <span class="diptych-tag">Focus 01 &middot; Patina Leather</span>
+              <h2 class="diptych-title">1976 European Heavy Hide</h2>
+              <p class="diptych-desc">Naturally weathered steerhide with original Talon brass pullers and deep tobacco
+                hue.</p>
+              <a href="shop.html?category=outerwear" class="era-link">
+                <span>View Outerwear Archive &rarr;</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Panel: Selvedge Indigo Denim -->
+          <div class="diptych-panel">
+            <img src="assets/images/sections/p14.jpg" alt="1980s Deadstock Red-Line Selvedge denim" class="diptych-img">
+            <div class="diptych-gradient"></div>
+            <div class="diptych-caption">
+              <span class="diptych-tag">Focus 02 &middot; Selvedge Loom</span>
+              <h2 class="diptych-title">1982 Red-Line Denim</h2>
+              <p class="diptych-desc">Shuttle loom woven with rope-dyed indigo yarn, rigid 14.5oz hand-feel.</p>
+              <a href="shop.html?category=denim" class="era-link">
+                <span>View Denim Archive &rarr;</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 3: ARCHITECTURAL GARMENT ANATOMY BREAKDOWN (NO CARDS)
+         ==================================================================== -->
+    <section class="anatomy-section" id="garment-anatomy">
+      <div class="site-container">
+
+        <div class="section-header-center">
+          <span class="section-eyebrow">Archival Deconstruction</span>
+          <h2 class="section-title">The Anatomy of Rare Textiles</h2>
+          <p class="section-desc">
+            We document the structural provenance of museum-grade artifacts before offering them to serious collectors.
+          </p>
+        </div>
+
+        <div class="anatomy-list">
+          <!-- Item 1: Western Chain-Stitch -->
+          <div class="anatomy-row">
+            <div class="anatomy-thumb-wrap">
+              <img src="assets/images/products/p15.jpg" alt="1968 Chain-Stitch Embroidered Western Rayon Shirt"
+                class="anatomy-thumb">
+            </div>
+            <div class="anatomy-content">
+              <span class="anatomy-era-year">1968 Americana Rayon</span>
+              <h3 class="anatomy-title">Chain-Stitch Embroidered Ranch Shirt</h3>
+              <p class="section-desc" style="margin-bottom: 0;">Heavy gabardine twill with genuine pearlized snap
+                closures and hand-guided floral scrollwork along the yokes.</p>
+              <div class="anatomy-specs-grid">
+                <div>
+                  <div class="anatomy-spec-label">Fiber Composition</div>
+                  <div class="anatomy-spec-val">100% Acetate Rayon</div>
+                </div>
+                <div>
+                  <div class="anatomy-spec-label">Condition Grade</div>
+                  <div class="anatomy-spec-val">Grade A+ (Museum)</div>
+                </div>
+                <div>
+                  <div class="anatomy-spec-label">Vault Price</div>
+                  <div class="anatomy-spec-val">$245.00</div>
+                </div>
+              </div>
+              <div>
+                <a href="shop.html" class="find-action-btn">Acquire Specimen &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: French Moleskin Chore Jacket -->
+          <div class="anatomy-row">
+            <div class="anatomy-thumb-wrap">
+              <img src="assets/images/products/p16.jpg" alt="1982 French Moleskin Workwear Chore Jacket"
+                class="anatomy-thumb">
+            </div>
+            <div class="anatomy-content">
+              <span class="anatomy-era-year">1982 French Atelier</span>
+              <h3 class="anatomy-title">Heavy Moleskin Worker Jacket</h3>
+              <p class="section-desc" style="margin-bottom: 0;">Dense cotton satin weave with curved collar, rounded
+                patch pockets, and faded ink inspection stamp on inner canvas.</p>
+              <div class="anatomy-specs-grid">
+                <div>
+                  <div class="anatomy-spec-label">Fiber Composition</div>
+                  <div class="anatomy-spec-val">Double-Weave Cotton</div>
+                </div>
+                <div>
+                  <div class="anatomy-spec-label">Condition Grade</div>
+                  <div class="anatomy-spec-val">Near Mint / Sanitized</div>
+                </div>
+                <div>
+                  <div class="anatomy-spec-label">Vault Price</div>
+                  <div class="anatomy-spec-val">$195.00</div>
+                </div>
+              </div>
+              <div>
+                <a href="shop.html" class="find-action-btn">Acquire Specimen &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3: Silk Organza Evening Bolero -->
+          <div class="anatomy-row">
+            <div class="anatomy-thumb-wrap">
+              <img src="assets/images/products/p17.jpg" alt="1994 French Haute Silk Organza Evening Bolero"
+                class="anatomy-thumb">
+            </div>
+            <div class="anatomy-content">
+              <span class="anatomy-era-year">1994 Paris Couture</span>
+              <h3 class="anatomy-title">Pleated Silk Organza Evening Bolero</h3>
+              <p class="section-desc" style="margin-bottom: 0;">Gossamer silk structured with hand-rolled hems,
+                micro-pleats, and single antique hook-and-eye closure.</p>
+              <div class="anatomy-specs-grid">
+                <div>
+                  <div class="anatomy-spec-label">Fiber Composition</div>
+                  <div class="anatomy-spec-val">100% Silk Organza</div>
+                </div>
+                <div>
+                  <div class="anatomy-spec-label">Condition Grade</div>
+                  <div class="anatomy-spec-val">Pristine Archival</div>
+                </div>
+                <div>
+                  <div class="anatomy-spec-label">Vault Price</div>
+                  <div class="anatomy-spec-val">$280.00</div>
+                </div>
+              </div>
+              <div>
+                <a href="shop.html" class="find-action-btn">Acquire Specimen &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 4: MULTI-IMAGE VISUAL RIBBON STRIP (HIGH IMAGERY)
+         ==================================================================== -->
+    <section class="ribbon-section" id="visual-ribbon">
+      <div class="site-container">
+
+        <div class="section-header-center" style="margin-bottom: 2.5rem;">
+          <span class="section-eyebrow">Micro-Details</span>
+          <h2 class="section-title">The Finery of Secondary Accessories</h2>
+        </div>
+
+        <div class="ribbon-grid">
+          <div class="ribbon-item">
+            <img src="assets/images/gallery/p18.jpg" alt="Vintage leather stacked heel boots" class="ribbon-photo">
+            <span class="ribbon-tag">1974 Cuban Heel Leather</span>
+          </div>
+
+          <div class="ribbon-item">
+            <img src="assets/images/gallery/p19.jpg" alt="Handcrafted vintage tortoise acetate sunglasses"
+              class="ribbon-photo">
+            <span class="ribbon-tag">1988 French Acetate</span>
+          </div>
+
+          <div class="ribbon-item">
+            <img src="assets/images/gallery/p20.jpg" alt="Solid gold vintage link bracelet and heirloom necklace"
+              class="ribbon-photo">
+            <span class="ribbon-tag">1965 Heirloom Chains</span>
+          </div>
+
+          <div class="ribbon-item">
+            <img src="assets/images/gallery/p21.jpg" alt="Hand-rolled vintage silk twill square scarf"
+              class="ribbon-photo">
+            <span class="ribbon-tag">1991 Botanical Silk Twill</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 5: GRADING PIPELINE & VAULT INSPECTION
+         ==================================================================== -->
+    <section class="grading-section" id="grading-pipeline">
+      <div class="site-container">
+
+        <div class="grading-layout">
+          <div>
+            <span class="section-eyebrow">Verification Protocols</span>
+            <h2 class="section-title">How Every Garment Is Graded & Archived</h2>
+            <p class="section-desc">
+              Transparency is our core principle. Every piece in our boutique is evaluated under specialized textile
+              standards before acceptance.
+            </p>
+
+            <div class="grading-pipeline-grid">
+              <div class="grading-step-card">
+                <div class="grading-step-code">V-01</div>
+                <h3 class="grading-step-heading">Era & Provenance Trace</h3>
+                <p class="grading-step-desc">Identifying manufacturer labels, union marks, font typography, and zipper
+                  brands.</p>
+              </div>
+
+              <div class="grading-step-card">
+                <div class="grading-step-code">V-02</div>
+                <h3 class="grading-step-heading">Textile Tensile Test</h3>
+                <p class="grading-step-desc">Inspecting seam load, warp and weft stability, and natural fiber
+                  elasticity.</p>
+              </div>
+
+              <div class="grading-step-card">
+                <div class="grading-step-code">V-03</div>
+                <h3 class="grading-step-heading">Steam & Ozone Purify</h3>
+                <p class="grading-step-desc">Non-chemical deep sanitation preserving fragile dye pigments and natural
+                  oils.</p>
+              </div>
+
+              <div class="grading-step-card">
+                <div class="grading-step-code">V-04</div>
+                <h3 class="grading-step-heading">Permanent Vault Tagging</h3>
+                <p class="grading-step-desc">Serial registration with exact dimensions, care regime, and authenticity
+                  warranty.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="grading-photo-wrap">
+            <img src="assets/images/about/p22.jpg" alt="Curator inspecting vintage garments on archival racks"
+              class="grading-photo">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 6: VIP TRUNK SHOW & PRIVATE ARCHIVE BOOKING
+         ==================================================================== -->
+    <section class="trunk-show-section" id="vip-trunk-show">
+      <div class="site-container">
+
+        <div class="trunk-show-grid">
+          <div>
+            <img src="assets/images/sections/p23.jpg"
+              alt="Private boutique fitting salon with velvet couch and champagne" class="trunk-show-img">
+          </div>
+
+          <div class="trunk-show-form-wrap">
+            <span class="trunk-badge">Private Salon Access</span>
+            <h2 class="trunk-title">Schedule a 1-on-1 Archive Consultation</h2>
+            <p class="trunk-desc">
+              Browse unreleased consignment lots with our resident vintage stylist. Includes private fitting suite,
+              measurements record, and champagne refreshments.A curated sanctuary of authentic vintage fashion,
+              sustainable secondhand designer garments, retro workwear,
+              and one-of-a-kind heirlooms spanning the 1960s to Y2K. Transparency is our core principle. Every piece in
+              our boutique is evaluated under specialized textile
+              standards before acceptance.Discover a more personal shopping experience, curated collections, and
+              thoughtful service reserved for our private clients.Private Salon Access
+              Be the first to discover new arrivals, private collections, and specially selected pieces.
+
+            </p>
+
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Shared Global Footer -->
+  <footer class="site-footer">
+    <div class="site-container">
+
+      <div class="footer-top-grid">
+        <!-- Brand Summary Column -->
+        <div class="footer-brand-wrap">
+          <div class="footer-brand-header">
+            <img src="assets/images/icons/logo.png" alt="Vintage Boutique" class="footer-brand-logo">
+            <div>
+              <div class="footer-brand-title">Vintage</div>
+              <div class="footer-brand-sub">Clothing & Thrift Boutique</div>
+            </div>
+          </div>
+          <p class="footer-desc">
+            A curated sanctuary of authentic vintage fashion, sustainable secondhand designer garments, retro workwear,
+            and one-of-a-kind heirlooms spanning the 1960s to Y2K.
+          </p>
+        </div>
+
+        <!-- Quick Navigation -->
+        <div>
+          <h2 class="footer-heading">Explore</h2>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link">Home 1 (Boutique)</a></li>
+            <li><a href="home-2.html" class="footer-link">Home 2 (Archive)</a></li>
+            <li><a href="shop.html" class="footer-link">Shop Collection</a></li>
+            <li><a href="sell.html" class="footer-link">Sell Your Clothes</a></li>
+            <li><a href="styling-tips.html" class="footer-link">Styling Tips</a></li>
+            <li><a href="about.html" class="footer-link">About Our Story</a></li>
+          </ul>
+        </div>
+
+        <!-- Shop by Category / Era -->
+        <div>
+          <h2 class="footer-heading">Shop By Era</h2>
+          <ul class="footer-links-list">
+            <li><a href="shop.html?category=denim" class="footer-link">Vintage Denim</a></li>
+            <li><a href="shop.html?category=outerwear" class="footer-link">Leather & Outerwear</a></li>
+            <li><a href="shop.html?category=dresses" class="footer-link">Boho & Slip Dresses</a></li>
+            <li><a href="shop.html?category=accessories" class="footer-link">Bags & Silk Scarves</a></li>
+            <li><a href="shop.html?era=70s" class="footer-link">70s Retro Groovy</a></li>
+            <li><a href="shop.html?era=90s" class="footer-link">90s Minimalist Street</a></li>
+          </ul>
+        </div>
+
+        <!-- Store Hours & Visit Info -->
+        <div>
+          <h2 class="footer-heading">Visit Our Store</h2>
+          <ul class="footer-links-list">
+            <li class="footer-desc" style="margin-bottom: 0.25rem;">428 Retro Lane, Heritage Quarter</li>
+            <li class="footer-desc" style="margin-bottom: 0.25rem;">Mon - Sat: 10:30 AM - 7:30 PM</li>
+            <li class="footer-desc" style="margin-bottom: 0.25rem;">Sunday: 12:00 PM - 5:00 PM</li>
+            <li><a href="contact.html" class="footer-link" style="font-weight: 600; text-decoration: underline;">Get
+                Directions &rarr;</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter Subscription Column -->
+        <div class="footer-newsletter-wrap">
+          <h2 class="footer-heading">Boutique Drops</h2>
+          <p class="footer-newsletter-text">
+            Subscribe for exclusive vintage drop previews, private trunk show invites, and consignment alerts.
+          </p>
+          <form class="footer-form" onsubmit="event.preventDefault(); alert('Subscribed to Vintage Boutique drops!');">
+            <input type="email" required placeholder="Enter your email address" class="footer-input"
+              aria-label="Email address for boutique newsletter">
+            <button type="submit" class="footer-submit-btn">Join</button>
+          </form>
+          <span class="footer-privacy-note">Zero spam. Only authentic curated drops.</span>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Copyright & Legal -->
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Vintage Clothing & Thrift Boutique. All rights reserved. Curated with sustainable passion.
+        </div>
+        <div class="footer-legal-links">
+          <a href="#" class="footer-link">Privacy Policy</a>
+          <a href="#" class="footer-link">Terms of Consignment</a>
+          <a href="#" class="footer-link">Authenticity Guarantee</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Floating Scroll-to-Top Button -->
+  <button type="button" class="scroll-top-btn" id="scroll-top-btn" aria-label="Scroll back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </button>
+
+  <!-- Login & Register Modal -->
+  <div class="auth-modal-overlay" id="auth-modal-overlay" aria-hidden="true" role="dialog" aria-modal="true"
+    aria-labelledby="auth-modal-title">
+    <div class="auth-modal-card">
+      <button type="button" class="auth-close-btn" id="auth-modal-close-btn" aria-label="Close login dialog">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <!-- Auth Modal Brand Header -->
+      <div class="auth-brand-header">
+        <a href="index.html" class="auth-brand-logo" aria-label="Vintage Clothing & Thrift Boutique Home">
+          <img src="assets/images/icons/logo.png" alt="Vintage Clothing & Thrift Boutique Logo" class="auth-logo-img"
+            width="48" height="48">
+          <div class="auth-brand-text">
+            <span class="auth-brand-title">VINTAGE</span>
+            <span class="auth-brand-subtitle">Clothing &amp; Thrift Boutique</span>
+          </div>
+        </a>
+        <p class="auth-brand-desc">Curated Relics of Timeless Expression</p>
+      </div>
+
+      <div class="auth-modal-tabs">
+        <button type="button" class="auth-tab-btn active" id="tab-login-btn">Sign In</button>
+        <button type="button" class="auth-tab-btn" id="tab-register-btn">Create Account</button>
+      </div>
+
+      <!-- Login Form -->
+      <form class="auth-form" id="form-login">
+        <div class="form-group">
+          <label class="form-label" for="login-email">Email Address</label>
+          <input type="email" id="login-email" required class="form-input" placeholder="vintage@example.com">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="login-password">Password</label>
+          <input type="password" id="login-password" required class="form-input" placeholder="••••••••">
+        </div>
+        <div class="form-options-row">
+          <label class="form-checkbox-label">
+            <input type="checkbox" name="remember">
+            <span>Remember me</span>
+          </label>
+          <a href="#" class="forgot-link">Forgot password?</a>
+        </div>
+        <button type="submit" class="auth-submit-btn">Sign In to Boutique</button>
+      </form>
+
+      <!-- Register Form -->
+      <form class="auth-form" id="form-register" style="display: none;">
+        <div class="form-group">
+          <label class="form-label" for="reg-name">Full Name</label>
+          <input type="text" id="reg-name" required class="form-input" placeholder="Eleanor Vance">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="reg-email">Email Address</label>
+          <input type="email" id="reg-email" required class="form-input" placeholder="vintage@example.com">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="reg-password">Password</label>
+          <input type="password" id="reg-password" required class="form-input" placeholder="Create secure password">
+        </div>
+        <button type="submit" class="auth-submit-btn">Register New Account</button>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- Shared External JavaScript (Zero inline JS) -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,804 @@
+/* ==========================================================================
+   VINTAGE CLOTHING & THRIFT BOUTIQUE - RESPONSIVE STYLESHEET
+   Tested for: 320, 375, 425, 768, 820, 1024, 1280, 1440, 1536, 1920+
+   ========================================================================== */
+
+/* Large Screens (1440px and up) */
+@media (min-width: 1440px) {
+  .site-container {
+    max-width: 1200px;
+  }
+}
+
+/* iPad Pro (11" & 12.9" / 13 Pro) & Small Desktops (1024px to 1366px) */
+@media (min-width: 1024px) and (max-width: 1366px) {
+  .site-container.header-container {
+    max-width: 100%;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    gap: 0.75rem;
+    justify-content: space-between;
+  }
+
+  .brand-link {
+    gap: 0.5rem;
+    flex-shrink: 0;
+  }
+
+  .brand-logo-img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .brand-name {
+    font-size: 1.22rem;
+  }
+
+  .brand-tagline {
+    font-size: 0.58rem;
+    letter-spacing: 0.14em;
+  }
+
+  .desktop-nav {
+    gap: 0.85rem;
+    flex-shrink: 0;
+  }
+  
+  .nav-link, 
+  .dropdown-toggle-btn {
+    font-size: 0.82rem;
+    padding: 0.35rem 0.15rem;
+    white-space: nowrap !important;
+    flex-shrink: 0;
+  }
+
+  .header-actions {
+    gap: 0.4rem;
+    flex-shrink: 0;
+  }
+
+  .ctrl-btn {
+    width: 34px;
+    height: 34px;
+    font-size: 0.75rem;
+  }
+
+  .header-login-btn {
+    padding: 0.45rem 0.75rem;
+    font-size: 0.82rem;
+    gap: 0.35rem;
+  }
+}
+
+@media (max-width: 1279px) {
+  .footer-top-grid {
+    grid-template-columns: 2fr 1fr 1fr 1fr 1.8fr;
+    gap: 2rem;
+  }
+}
+
+/* Tablet Portrait & Switch to Mobile Menu (1023px and below) */
+@media (max-width: 1023px) {
+  :root {
+    --header-height: 64px;
+  }
+
+  .desktop-nav {
+    display: none; /* Switch smoothly to mobile drawer */
+  }
+
+  .header-actions .ctrl-btn,
+  .header-actions .header-login-btn {
+    display: none; /* Move to mobile drawer for clean single-line header */
+  }
+
+  .mobile-toggle-btn {
+    display: inline-flex;
+  }
+
+  .footer-top-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+
+  .footer-brand-wrap {
+    grid-column: span 2;
+  }
+
+  .footer-newsletter-wrap {
+    grid-column: span 2;
+  }
+
+  /* Home 1 Section Tablet Adjustments */
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-image-composition {
+    order: -1;
+  }
+
+  .eras-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .finds-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .curation-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .boutique-store-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .community-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Home 2 Tablet Adjustments */
+  .hero-vault-title {
+    font-size: 3.2rem;
+  }
+
+  .diptych-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .anatomy-row {
+    grid-template-columns: 1fr;
+  }
+
+  .ribbon-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grading-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .trunk-show-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* About Page Tablet Adjustments */
+  .manifesto-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .manifesto-title {
+    font-size: 2.8rem;
+  }
+
+  .pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .curators-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sourcing-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .sourcing-photo-wrap {
+    min-height: 340px;
+    height: 340px;
+  }
+
+  .about-cta-title {
+    font-size: 2.8rem;
+  }
+
+  /* Shop Page Tablet Adjustments */
+  .shop-header-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .gateways-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .catalog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sizing-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .sizing-img-frame {
+    min-height: 340px;
+    height: 340px;
+  }
+
+  .drops-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Sell Page Tablet Adjustments */
+  .sell-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .pathways-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .seek-matrix-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .protocol-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .stories-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Styling Tips Tablet Adjustments */
+  .styling-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .formula-card, .formula-card:nth-child(even) {
+    grid-template-columns: 1fr;
+  }
+
+  .formula-card:nth-child(even) .formula-img-wrap {
+    order: initial;
+  }
+
+  .silhouettes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .care-pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .care-atelier-banner {
+    grid-template-columns: 1fr;
+  }
+
+  .care-banner-media {
+    min-height: 280px;
+    height: 280px;
+  }
+
+  .care-banner-content {
+    padding: 2.25rem 1.75rem;
+  }
+
+  .care-banner-specs {
+    flex-wrap: wrap;
+    gap: 1.25rem;
+  }
+
+  .capsule-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Contact Page Tablet Adjustments */
+  .contact-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .salon-spaces-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .schedule-transit-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .concierge-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .neighborhood-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* About Page Tablet Adjustments */
+  .conservation-mosaic-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  .mosaic-card-hero {
+    grid-column: 1 / -1;
+    grid-row: auto;
+    height: 380px;
+  }
+
+  .mosaic-card {
+    height: 240px;
+  }
+}
+
+/* Mobile Devices (767px and below) */
+@media (max-width: 767px) {
+  /* About Page Mobile Adjustments */
+  .conservation-mosaic-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .mosaic-card-hero {
+    height: 320px;
+  }
+
+  .mosaic-card {
+    height: 260px;
+  }
+
+  .conservation-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+  :root {
+    --header-height: 60px;
+  }
+
+  .contact-headline {
+    font-size: 2.3rem;
+  }
+
+  .map-photo-frame {
+    height: 340px;
+  }
+
+  .map-pin-badge {
+    position: static;
+    margin-top: 1rem;
+    max-width: 100%;
+  }
+
+  .concierge-form-box {
+    padding: 1.75rem 1.25rem;
+  }
+
+
+  .styling-headline {
+    font-size: 2.3rem;
+  }
+
+  .formula-body {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .formula-pairing-chips {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    margin-top: 0.85rem;
+  }
+
+  .pairing-chip {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0.55rem 0.85rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 6px;
+    background-color: var(--bg-secondary);
+    color: var(--text-headings);
+    border: 1px solid var(--border-light);
+  }
+
+  .pairing-chip::before {
+    content: "✦";
+    margin-right: 0.55rem;
+    color: var(--color-warm-brown);
+    font-size: 0.75rem;
+    flex-shrink: 0;
+  }
+
+  html.dark .pairing-chip {
+    background-color: #121011;
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #FFFFFF !important;
+  }
+
+  .silhouettes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .care-rule-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.65rem;
+    padding: 1.15rem 1.15rem;
+  }
+
+  .care-fiber-badge {
+    display: inline-block;
+    align-self: flex-start;
+    white-space: nowrap;
+    margin-bottom: 0.25rem;
+  }
+
+  .capsule-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .styling-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .styling-booking-form {
+    padding: 1.5rem 1.15rem;
+  }
+
+
+  .sell-headline {
+    font-size: 2.3rem;
+  }
+
+  .seek-matrix-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sell-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .sell-inquiry-form {
+    padding: 1.5rem 1.15rem;
+  }
+
+
+  .shop-headline {
+    font-size: 2.3rem;
+  }
+
+  .catalog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .drops-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sizing-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .sizing-metric-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.65rem;
+    padding: 1.15rem 1.15rem;
+  }
+
+  .metric-tag {
+    display: inline-block;
+    align-self: flex-start;
+    white-space: nowrap;
+  }
+
+  .shop-cta-form {
+    flex-direction: column;
+  }
+
+
+  .manifesto-title {
+    font-size: 2.2rem;
+  }
+
+  .manifesto-dual-frames {
+    height: 360px;
+  }
+
+  .manifesto-frame-back {
+    height: 260px;
+  }
+
+  .manifesto-frame-front {
+    height: 220px;
+  }
+
+  .pillars-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pillar-col {
+    height: 320px;
+  }
+
+  .curators-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sourcing-city-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.65rem;
+    padding: 1.15rem 1.15rem;
+  }
+
+  .city-badge {
+    display: inline-block;
+    align-self: flex-start;
+    white-space: nowrap;
+  }
+
+  .about-cta-title {
+    font-size: 2.2rem;
+  }
+
+
+  .hero-vault-section {
+    min-height: auto;
+    padding: 3.5rem 1.25rem 3rem;
+  }
+
+  .hero-vault-title {
+    font-size: 2.25rem;
+  }
+
+  .diptych-panel {
+    min-height: 360px;
+    padding: 1.5rem;
+  }
+
+  .anatomy-specs-grid {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+
+  .ribbon-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grading-pipeline-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trunk-form-row,
+  .trunk-show-form-row {
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+  }
+
+  .trunk-show-form-wrap {
+    padding: 1.75rem 1.15rem;
+  }
+
+
+  .site-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .hero-section {
+    padding: 3rem 0 3.5rem;
+  }
+
+  .hero-title {
+    font-size: 2.25rem;
+  }
+
+  .hero-lead {
+    font-size: 0.95rem;
+  }
+
+  .hero-stats-row {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .hero-main-photo {
+    height: 380px;
+  }
+
+  .hero-floating-card {
+    position: static;
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  .eras-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .era-card {
+    height: 320px;
+  }
+
+  .finds-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .community-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .consignment-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 1.5rem;
+  }
+
+  .store-main-photo {
+    height: 300px;
+  }
+
+  .brand-logo-img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .brand-name {
+    font-size: 1.25rem;
+  }
+
+  .brand-tagline {
+    font-size: 0.58rem;
+    letter-spacing: 0.16em;
+  }
+
+  .footer-top-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .footer-brand-wrap,
+  .footer-newsletter-wrap {
+    grid-column: span 1;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .footer-legal-links {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-form {
+    flex-direction: column;
+  }
+
+  .footer-submit-btn {
+    width: 100%;
+  }
+
+  .scroll-top-btn {
+    bottom: 1rem;
+    right: 1rem;
+    width: 38px;
+    height: 38px;
+    z-index: 100;
+  }
+
+  .scroll-top-btn.visible {
+    opacity: 0.85;
+  }
+
+  .scroll-top-btn.visible:hover,
+  .scroll-top-btn.visible:active {
+    opacity: 1;
+  }
+
+  [dir="rtl"] .scroll-top-btn {
+    right: auto;
+    left: 1rem;
+  }
+
+  .custom-select-wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .custom-select-trigger {
+    width: 100% !important;
+    min-height: 44px;
+    font-size: 0.88rem;
+  }
+
+  .custom-select-menu {
+    width: 100% !important;
+    max-width: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+  }
+
+  .custom-select-option {
+    padding: 0.75rem 0.95rem;
+    font-size: 0.88rem;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+  }
+
+  .custom-datepicker-wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .custom-datepicker-trigger {
+    width: 100% !important;
+    min-height: 44px;
+    font-size: 0.88rem;
+  }
+
+  .custom-datepicker-popup {
+    width: 100% !important;
+    max-width: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    padding: 0.85rem 0.65rem;
+  }
+
+  .calendar-day-cell {
+    height: 32px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Extra Small Phones (375px and 320px) */
+@media (max-width: 375px) {
+  .brand-name {
+    font-size: 1.15rem;
+  }
+
+  .brand-tagline {
+    display: none; /* Prevent line wrapping on ultra compact screens */
+  }
+
+  .auth-modal-card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .auth-brand-title {
+    font-size: 1.25rem;
+  }
+
+  .auth-logo-img {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* Reduced Motion Preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

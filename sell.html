@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sell Your Vintage Clothes & Consignment | Vintage Clothing & Thrift Boutique</title>
+  <meta name="description"
+    content="Turn your pre-2000s vintage garments into immediate cash payouts or boutique credit. We buy authentic selvedge denim, archival leather, and designer vintage.">
+
+  <!-- Favicon (High Contrast Vector + PNG) -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/icons/favicon.png">
+
+  <!-- External Stylesheets (Zero inline CSS) -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+
+  <!-- Branded Page Loader -->
+  <div id="site-loader" aria-hidden="true">
+    <div class="loader-logo-wrap">
+      <div class="loader-spinner"></div>
+      <img src="assets/images/icons/logo.png" alt="Vintage Boutique Loader" class="loader-logo-img">
+    </div>
+    <span class="loader-text">Vintage Boutique</span>
+  </div>
+
+  <!-- Sticky Compact Desktop & Mobile Header -->
+  <header class="site-header" id="site-header">
+    <div class="site-container header-container">
+
+      <!-- Brand Logo + Name + Tagline -->
+      <a href="index.html" class="brand-link" aria-label="Vintage Clothing and Thrift Boutique Home">
+        <img src="assets/images/icons/logo.png" alt="Vintage Clothing & Thrift Boutique Logo" class="brand-logo-img">
+        <div class="brand-text-block">
+          <span class="brand-name">Vintage</span>
+          <span class="brand-tagline">Clothing & Thrift Boutique</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation: Exactly 6 Navigation Items -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <!-- 1. Home with Click-Only Dropdown -->
+        <div class="nav-item-dropdown" id="nav-home-dropdown">
+          <button type="button" class="dropdown-toggle-btn" aria-expanded="false" aria-haspopup="true">
+            <span>Home</span>
+            <svg class="dropdown-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                clip-rule="evenodd" />
+            </svg>
+          </button>
+          <div class="dropdown-menu" role="menu">
+            <a href="index.html" class="dropdown-item" role="menuitem">Home 1 (Curated Boutique)</a>
+            <a href="home-2.html" class="dropdown-item" role="menuitem">Home 2 (The Vault & Archive)</a>
+          </div>
+        </div>
+
+        <!-- 2. Shop -->
+        <a href="shop.html" class="nav-link">Shop</a>
+
+        <!-- 3. Sell Your Clothes (Active) -->
+        <a href="sell.html" class="nav-link active">Sell Your Clothes</a>
+
+        <!-- 4. Styling Tips -->
+        <a href="styling-tips.html" class="nav-link">Styling Tips</a>
+
+        <!-- 5. About (Mandatory) -->
+        <a href="about.html" class="nav-link">About</a>
+
+        <!-- 6. Contact (Directly Visible) -->
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Desktop Header Actions: RTL, Dark Mode, Login Button -->
+      <div class="header-actions">
+        <!-- RTL Toggle -->
+        <button type="button" class="ctrl-btn rtl-toggle-btn" aria-label="Toggle Layout Direction (RTL/LTR)">
+          <span class="rtl-label">RTL</span>
+        </button>
+
+        <!-- Dark Mode Toggle -->
+        <button type="button" class="ctrl-btn theme-toggle-btn" aria-label="Toggle Dark Mode">
+          <svg class="ctrl-icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="ctrl-icon sun-icon" style="display: none;" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- Login Button (Replaces CTA) -->
+        <button type="button" class="header-login-btn open-login-btn" id="header-login-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          <span>Login</span>
+        </button>
+
+        <!-- Mobile Drawer Toggle Trigger -->
+        <button type="button" class="mobile-toggle-btn" id="mobile-menu-open-btn" aria-label="Open Mobile Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Menu Drawer & Overlay -->
+  <div class="mobile-menu-overlay" id="mobile-menu-overlay" aria-hidden="true">
+    <div class="mobile-menu-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu">
+
+      <!-- Drawer Header: Brand Logo, Brand Text, Close Button -->
+      <div class="mobile-drawer-header">
+        <a href="index.html" class="brand-link">
+          <img src="assets/images/icons/logo.png" alt="Vintage Boutique" class="brand-logo-img">
+          <div class="brand-text-block">
+            <span class="brand-name">Vintage</span>
+            <span class="brand-tagline">Clothing & Thrift Boutique</span>
+          </div>
+        </a>
+        <button type="button" class="mobile-close-btn" id="mobile-menu-close-btn" aria-label="Close Mobile Menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation Links -->
+      <ul class="mobile-nav-list">
+        <!-- Home Accordion -->
+        <li class="mobile-accordion" id="mobile-home-accordion">
+          <button type="button" class="mobile-accordion-toggle" id="mobile-home-toggle-btn" aria-expanded="false">
+            <span>Home</span>
+            <svg class="mobile-accordion-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                clip-rule="evenodd" />
+            </svg>
+          </button>
+          <ul class="mobile-submenu">
+            <li><a href="index.html" class="mobile-sub-link">Home 1 (Curated Boutique)</a></li>
+            <li><a href="home-2.html" class="mobile-sub-link">Home 2 (The Vault & Archive)</a></li>
+          </ul>
+        </li>
+
+        <li><a href="shop.html" class="mobile-nav-link">Shop</a></li>
+        <li><a href="sell.html" class="mobile-nav-link active">Sell Your Clothes</a></li>
+        <li><a href="styling-tips.html" class="mobile-nav-link">Styling Tips</a></li>
+        <li><a href="about.html" class="mobile-nav-link">About</a></li>
+        <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Drawer Footer with Theme & Direction Controls and Login -->
+      <div class="mobile-drawer-footer">
+        <div class="mobile-actions-row">
+          <!-- Dark Mode Toggle in Mobile -->
+          <button type="button" class="ctrl-btn theme-toggle-btn" aria-label="Toggle Dark Mode">
+            <svg class="ctrl-icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <svg class="ctrl-icon sun-icon" style="display: none;" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <span class="theme-label-text">Dark Mode</span>
+          </button>
+
+          <!-- RTL Toggle in Mobile -->
+          <button type="button" class="ctrl-btn rtl-toggle-btn" aria-label="Toggle Layout Direction (RTL/LTR)">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="17 1 21 5 17 9"></polyline>
+              <path d="M3 5h18"></path>
+              <polyline points="7 23 3 19 7 15"></polyline>
+              <path d="M21 19H3"></path>
+            </svg>
+            <span class="rtl-label">RTL</span>
+          </button>
+        </div>
+
+        <!-- Login in Mobile Drawer -->
+        <button type="button" class="mobile-login-btn open-login-btn" id="mobile-login-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          <span>Account Login / Sign Up</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT: EXACTLY 6 UNIQUE MAIN CONTENT SECTIONS (LAST SECTION = CTA) -->
+  <main id="main-content">
+
+    <!-- ====================================================================
+         SECTION 1: CONSIGNMENT STUDIO HERO BANNER (MATCHED CLEAN HEIGHT)
+         ==================================================================== -->
+    <section class="sell-hero-section" id="sell-hero">
+      <div class="site-container sell-hero-grid">
+
+        <div>
+          <span class="section-eyebrow">Fair Appraisal & Instant Payouts</span>
+          <h1 class="sell-headline">Turn Rare Vintage Into Cash or In-Store Credit.</h1>
+          <p class="section-desc" style="max-width: 540px;">
+            We purchase pre-2000s denim, leather, and designer heirlooms. Zero hidden consignor listing fees,
+            complimentary insured shipping, and same-day payment.
+          </p>
+
+          <div class="sell-trust-pills">
+            <div class="trust-pill">
+              <span class="hero-badge-dot"></span>
+              <span>Direct Bank Payout in 24h</span>
+            </div>
+            <div class="trust-pill">
+              <span class="hero-badge-dot"></span>
+              <span>Up to 75% Store Credit</span>
+            </div>
+            <div class="trust-pill">
+              <span class="hero-badge-dot"></span>
+              <span>Free Insured Mailer Kit</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sell-hero-photo-wrap">
+          <img src="assets/images/hero/p40.jpg" alt="Vintage textile appraisal and consignment evaluation"
+            class="sell-hero-photo">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 2: PAYOUT PATHWAYS COMPARATIVE SCALE
+         ==================================================================== -->
+    <section class="pathways-section" id="payout-pathways">
+      <div class="site-container">
+
+        <div class="section-header-center">
+          <span class="section-eyebrow">Transparent Economics</span>
+          <h2 class="section-title">Choose Your Consignment Settlement</h2>
+          <p class="section-desc">
+            Unlike traditional auction houses that hold your money for months, we settle immediately upon
+            authentication.
+          </p>
+        </div>
+
+        <div class="pathways-grid">
+          <!-- Option A: Direct Cash -->
+          <div class="pathway-card">
+            <div class="pathway-card-header">
+              <img src="assets/images/sections/p41.jpg" alt="Immediate cash payout ledger" class="pathway-img">
+              <div class="pathway-rate-badge">60% Payout</div>
+            </div>
+            <div class="pathway-body">
+              <h3 class="pathway-title">Immediate Cash / Wire Transfer</h3>
+              <p class="pathway-desc">Perfect if you are downsizing, handling an estate collection, or looking for
+                immediate liquidity.</p>
+
+              <ul class="pathway-perks">
+                <li class="perk-item">
+                  <svg class="perk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Funds deposited via Bank Wire, Zelle, or PayPal within 24 hours</span>
+                </li>
+                <li class="perk-item">
+                  <svg class="perk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>No waiting for the garment to sell to end-buyers</span>
+                </li>
+                <li class="perk-item">
+                  <svg class="perk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Full ownership transferred immediately to boutique</span>
+                </li>
+              </ul>
+
+              <a href="#sell-cta" class="btn-primary-hero" style="justify-content: center;">Choose Cash Appraisal</a>
+            </div>
+          </div>
+
+          <!-- Option B: Boutique Store Credit -->
+          <div class="pathway-card">
+            <div class="pathway-card-header">
+              <img src="assets/images/sections/p42.jpg" alt="Boutique shopping credit with vintage bags"
+                class="pathway-img">
+              <div class="pathway-rate-badge">75% Credit</div>
+            </div>
+            <div class="pathway-body">
+              <h3 class="pathway-title">Boutique Trade Credit (Highest Value)</h3>
+              <p class="pathway-desc">Designed for active collectors and vintage lovers who want to continually trade
+                and refresh their wardrobe.</p>
+
+              <ul class="pathway-perks">
+                <li class="perk-item">
+                  <svg class="perk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Instant digital gift card loaded with 75% of appraised value</span>
+                </li>
+                <li class="perk-item">
+                  <svg class="perk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Valid across in-store fitting salons & online weekly drops</span>
+                </li>
+                <li class="perk-item">
+                  <svg class="perk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Never expires + VIP early access pass to Friday trunk shows</span>
+                </li>
+              </ul>
+
+              <a href="#sell-cta" class="btn-outline-hero" style="justify-content: center;">Choose Store Credit</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 3: WHAT WE SEEK: ACCEPTED ERAS & CONDITION MATRIX
+         ==================================================================== -->
+    <section class="seek-section" id="what-we-seek">
+      <div class="site-container">
+
+        <div class="section-header-center">
+          <span class="section-eyebrow">Acquisition Standards</span>
+          <h2 class="section-title">What Garments We Are Buying Today</h2>
+          <p class="section-desc">
+            We specialize in verified authentic pieces fabricated between 1960 and 2002 with strong textile durability.
+          </p>
+        </div>
+
+        <div class="seek-matrix-grid">
+          <!-- Item 1 -->
+          <div class="seek-card">
+            <div class="seek-thumb-wrap">
+              <img src="assets/images/products/p43.jpg" alt="Vintage Levi's and selvedge denim tags" class="seek-thumb">
+            </div>
+            <div class="seek-body">
+              <span class="seek-category">Priority 01 &middot; Denim</span>
+              <h3 class="seek-title">Selvedge & Made-in-USA Jeans</h3>
+              <p class="seek-text">Redline Levi's 501, 505, Lee Riders, Big Mac workwear, and denim trucker jackets from
+                the 60s to 90s.</p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="seek-card">
+            <div class="seek-thumb-wrap">
+              <img src="assets/images/products/p44.jpg" alt="Vintage European leather motorcycle jacket"
+                class="seek-thumb">
+            </div>
+            <div class="seek-body">
+              <span class="seek-category">Priority 02 &middot; Leather</span>
+              <h3 class="seek-title">Heavy Steerhide & Moto Jackets</h3>
+              <p class="seek-text">Schott Perfecto, vintage Avirex flight bombers, and 1970s cafe racer jackets with
+                original brass zippers.</p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="seek-card">
+            <div class="seek-thumb-wrap">
+              <img src="assets/images/products/p45.jpg" alt="Vintage floral silk tea dresses" class="seek-thumb">
+            </div>
+            <div class="seek-body">
+              <span class="seek-category">Priority 03 &middot; Silk</span>
+              <h3 class="seek-title">Parisian Silks & French Boho Gowns</h3>
+              <p class="seek-text">1970s Gunne Sax prairie dresses, blouses,consign from home
+                across and 1990s minimal
+                silk slip dresses.</p>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="seek-card">
+            <div class="seek-thumb-wrap">
+              <img src="assets/images/products/p46.jpg" alt="Vintage leather saddle bags and accessories"
+                class="seek-thumb">
+            </div>
+            <div class="seek-body">
+              <span class="seek-category">Priority 04 &middot; Relics</span>
+              <h3 class="seek-title">Hand-Tooled Leather & Silver</h3>
+              <p class="seek-text">Heirloom leather luggage, Western tooled belts with sterling silver buckles, and silk
+                twill scarves.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 4: 4-STEP CONSIGNMENT PROTOCOL
+         ==================================================================== -->
+    <section class="protocol-section" id="consignment-protocol">
+      <div class="site-container protocol-grid">
+
+        <div>
+          <span class="section-eyebrow">The Simple Process</span>
+          <h2 class="section-title">How Mail-In & In-Person Selling Works</h2>
+          <p class="section-desc">
+            Whether you visit our boutique fitting parlor or consign from home across the country, selling to us is
+            seamless.
+          </p>
+
+          <div class="protocol-steps-list">
+            <div class="protocol-step-item">
+              <div class="protocol-step-num">1</div>
+              <div>
+                <h3 class="protocol-step-title">Submit Quick Photos Online</h3>
+                <p class="protocol-step-desc">Snap clear photos of front, back, and inner labels. Our curators review
+                  within 4 business hours.</p>
+              </div>
+            </div>
+
+            <div class="protocol-step-item">
+              <div class="protocol-step-num">2</div>
+              <div>
+                <h3 class="protocol-step-title">Receive Prepaid Insured Mailer Kit</h3>
+                <p class="protocol-step-desc">We ship a sturdy water-resistant consignment box with prepaid tracking
+                  labels directly to your door.</p>
+              </div>
+            </div>
+
+            <div class="protocol-step-item">
+              <div class="protocol-step-num">3</div>
+              <div>
+                <h3 class="protocol-step-title">In-Hand Appraisal & Final Guarantee</h3>
+                <p class="protocol-step-desc">Our master textile conservators physically authenticate fibers, zippers,
+                  and condition grade.</p>
+              </div>
+            </div>
+
+            <div class="protocol-step-item">
+              <div class="protocol-step-num">4</div>
+              <div>
+                <h3 class="protocol-step-title">Instant Cash or Credit Transfer</h3>
+                <p class="protocol-step-desc">Approve your offer and receive immediate payment. If you decline, we ship
+                  your items back free of charge.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="protocol-photo-wrap">
+          <img src="assets/images/about/p47.jpg" alt="Prepaid insured consignment shipping kit package"
+            class="protocol-photo">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 5: RECENT CONSIGNOR SUCCESS STORIES
+         ==================================================================== -->
+    <section class="stories-section" id="consignor-stories">
+      <div class="site-container">
+
+        <div class="section-header-center">
+          <span class="section-eyebrow">Verified Consignors</span>
+          <h2 class="section-title">Real Appraisals, Same-Day Payouts</h2>
+          <p class="section-desc">
+            See how collectors and vintage lovers across the country transformed wardrobe clutter into significant
+            payout.
+          </p>
+        </div>
+
+        <div class="stories-grid">
+          <!-- Story 1 -->
+          <div class="story-card">
+            <div class="story-author-row">
+              <img src="assets/images/gallery/consignor-story-1.jpg" alt="Portrait of consignor Clara S."
+                class="story-avatar">
+              <div>
+                <div class="story-author-name">Clara S. &middot; Seattle</div>
+                <div class="story-item-tag">Consigned: 1978 French Leather Trench</div>
+              </div>
+            </div>
+            <div class="story-payout-box">
+              <span class="payout-label">Settlement Mode</span>
+              <span class="payout-amount">$280.00 Wire</span>
+            </div>
+            <p class="story-quote">"I inherited my aunt’s 70s trench coat. The team authenticated the Italian lambskin
+              in two days and wired the funds that same afternoon."</p>
+          </div>
+
+          <!-- Story 2 -->
+          <div class="story-card">
+            <div class="story-author-row">
+              <img src="assets/images/gallery/consignor-story-2.jpg" alt="Portrait of consignor Liam M."
+                class="story-avatar">
+              <div>
+                <div class="story-author-name">Liam M. &middot; Austin</div>
+                <div class="story-item-tag">Consigned: 4 Pairs of 90s Made-in-USA 501s</div>
+              </div>
+            </div>
+            <div class="story-payout-box">
+              <span class="payout-label">Settlement Mode</span>
+              <span class="payout-amount">$420.00 Credit</span>
+            </div>
+            <p class="story-quote">"Opted for the 75% boutique credit. I used it to pick up an amazing Schott leather
+              jacket from their Friday drop. Perfect trade!"</p>
+          </div>
+
+          <!-- Story 3 -->
+          <div class="story-card">
+            <div class="story-author-row">
+              <img src="assets/images/gallery/consignor-story-3.jpg" alt="Portrait of consignor Evelyn R."
+                class="story-avatar">
+              <div>
+                <div class="story-author-name">Evelyn R. &middot; Brooklyn</div>
+                <div class="story-item-tag">Consigned: Estate Lot of 6 1970s Silk Dresses</div>
+              </div>
+            </div>
+            <div class="story-payout-box">
+              <span class="payout-label">Settlement Mode</span>
+              <span class="payout-amount">$850.00 Wire</span>
+            </div>
+            <p class="story-quote">"Zero hassle compared to online marketplaces where buyers constantly lowball.
+              Transparent, professional, and respectful of vintage textiles."</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 6: MANDATORY FINAL CTA SECTION (SUBMIT CONSIGNMENT INQUIRY)
+         ==================================================================== -->
+    <section class="sell-cta-section" id="sell-cta">
+      <img src="assets/images/backgrounds/p48.jpg" alt="Boutique appraisal workshop" class="sell-cta-bg">
+      <div class="sell-cta-overlay"></div>
+
+      <div class="site-container">
+        <div class="sell-cta-content">
+          <h2 class="sell-cta-title">Start Your Consignment Appraisal.</h2>
+          <p class="sell-cta-desc">
+            Upload item photos or describe what you have. Our appraisal desk responds with an estimated offer range
+            within 4 hours.
+          </p>
+
+          <!-- Appraisal Inquiry Form -->
+          <form class="sell-inquiry-form"
+            onsubmit="event.preventDefault(); alert('Consignment appraisal request received! A curator will contact you with an offer range.');">
+            <div class="sell-form-row">
+              <div class="form-group">
+                <label class="form-label" style="color: #FFFFFF;" for="consign-name">Your Full Name</label>
+                <input type="text" id="consign-name" required class="form-input" placeholder="Clara Vance">
+              </div>
+              <div class="form-group">
+                <label class="form-label" style="color: #FFFFFF;" for="consign-email">Email Address</label>
+                <input type="email" id="consign-email" required class="form-input" placeholder="clara@example.com">
+              </div>
+            </div>
+
+            <div class="sell-form-row">
+              <div class="form-group">
+                <label class="form-label" style="color: #FFFFFF;" for="consign-category">Garment Category</label>
+                <select id="consign-category" class="form-input">
+                  <option value="denim">Vintage Denim & Selvedge</option>
+                  <option value="leather">Leather & Shearling Coats</option>
+                  <option value="dress">Silk & Prairie Dresses</option>
+                  <option value="bags">Bags & Vintage Accessories</option>
+                  <option value="estate">Estate Lots & Multi-Pieces</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" style="color: #FFFFFF;" for="consign-preference">Preferred Payout</label>
+                <select id="consign-preference" class="form-input">
+                  <option value="cash">60% Immediate Cash Wire</option>
+                  <option value="credit">75% Boutique Store Credit</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 1.25rem;">
+              <label class="form-label" style="color: #FFFFFF;" for="consign-details">Garment Details & Era (Labels,
+                Condition, Flaws)</label>
+              <textarea id="consign-details" rows="3" class="form-input"
+                placeholder="e.g. 1970s Levi's denim jacket, small tear near hem, original brass snaps..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary-hero"
+              style="width: 100%; justify-content: center; background-color: var(--color-warm-brown);">
+              <span>Submit For Free Appraisal &rarr;</span>
+            </button>
+          </form>
+
+          <div style="font-size: 0.85rem; color: #E5DFD5;">
+            Prefer in-person consignment? Walk in to our boutique parlor Mon–Sat or text photos directly to our
+            appraisal desk: <strong>(555) 789-0123</strong>.
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Shared Global Footer -->
+  <footer class="site-footer">
+    <div class="site-container">
+
+      <div class="footer-top-grid">
+        <!-- Brand Summary Column -->
+        <div class="footer-brand-wrap">
+          <div class="footer-brand-header">
+            <img src="assets/images/icons/logo.png" alt="Vintage Boutique" class="footer-brand-logo">
+            <div>
+              <div class="footer-brand-title">Vintage</div>
+              <div class="footer-brand-sub">Clothing & Thrift Boutique</div>
+            </div>
+          </div>
+          <p class="footer-desc">
+            A curated sanctuary of authentic vintage fashion, sustainable secondhand designer garments, retro workwear,
+            and one-of-a-kind heirlooms spanning the 1960s to Y2K.
+          </p>
+        </div>
+
+        <!-- Quick Navigation -->
+        <div>
+          <h2 class="footer-heading">Explore</h2>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link">Home 1 (Boutique)</a></li>
+            <li><a href="home-2.html" class="footer-link">Home 2 (Archive)</a></li>
+            <li><a href="shop.html" class="footer-link">Shop Collection</a></li>
+            <li><a href="sell.html" class="footer-link">Sell Your Clothes</a></li>
+            <li><a href="styling-tips.html" class="footer-link">Styling Tips</a></li>
+            <li><a href="about.html" class="footer-link">About Our Story</a></li>
+          </ul>
+        </div>
+
+        <!-- Shop by Category / Era -->
+        <div>
+          <h2 class="footer-heading">Shop By Era</h2>
+          <ul class="footer-links-list">
+            <li><a href="shop.html?category=denim" class="footer-link">Vintage Denim</a></li>
+            <li><a href="shop.html?category=outerwear" class="footer-link">Leather & Outerwear</a></li>
+            <li><a href="shop.html?category=dresses" class="footer-link">Boho & Slip Dresses</a></li>
+            <li><a href="shop.html?category=accessories" class="footer-link">Bags & Silk Scarves</a></li>
+            <li><a href="shop.html?era=70s" class="footer-link">70s Retro Groovy</a></li>
+            <li><a href="shop.html?era=90s" class="footer-link">90s Minimalist Street</a></li>
+          </ul>
+        </div>
+
+        <!-- Store Hours & Visit Info -->
+        <div>
+          <h2 class="footer-heading">Visit Our Store</h2>
+          <ul class="footer-links-list">
+            <li class="footer-desc" style="margin-bottom: 0.25rem;">428 Retro Lane, Heritage Quarter</li>
+            <li class="footer-desc" style="margin-bottom: 0.25rem;">Mon - Sat: 10:30 AM - 7:30 PM</li>
+            <li class="footer-desc" style="margin-bottom: 0.25rem;">Sunday: 12:00 PM - 5:00 PM</li>
+            <li><a href="contact.html" class="footer-link" style="font-weight: 600; text-decoration: underline;">Get
+                Directions &rarr;</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter Subscription Column -->
+        <div class="footer-newsletter-wrap">
+          <h2 class="footer-heading">Boutique Drops</h2>
+          <p class="footer-newsletter-text">
+            Subscribe for exclusive vintage drop previews, private trunk show invites, and consignment alerts.
+          </p>
+          <form class="footer-form" onsubmit="event.preventDefault(); alert('Subscribed to Vintage Boutique drops!');">
+            <input type="email" required placeholder="Enter your email address" class="footer-input"
+              aria-label="Email address for boutique newsletter">
+            <button type="submit" class="footer-submit-btn">Join</button>
+          </form>
+          <span class="footer-privacy-note">Zero spam. Only authentic curated drops.</span>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Copyright & Legal -->
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Vintage Clothing & Thrift Boutique. All rights reserved. Curated with sustainable passion.
+        </div>
+        <div class="footer-legal-links">
+          <a href="#" class="footer-link">Privacy Policy</a>
+          <a href="#" class="footer-link">Terms of Consignment</a>
+          <a href="#" class="footer-link">Authenticity Guarantee</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Floating Scroll-to-Top Button -->
+  <button type="button" class="scroll-top-btn" id="scroll-top-btn" aria-label="Scroll back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </button>
+
+  <!-- Login & Register Modal -->
+  <div class="auth-modal-overlay" id="auth-modal-overlay" aria-hidden="true" role="dialog" aria-modal="true"
+    aria-labelledby="auth-modal-title">
+    <div class="auth-modal-card">
+      <button type="button" class="auth-close-btn" id="auth-modal-close-btn" aria-label="Close login dialog">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <!-- Auth Modal Brand Header -->
+      <div class="auth-brand-header">
+        <a href="index.html" class="auth-brand-logo" aria-label="Vintage Clothing & Thrift Boutique Home">
+          <img src="assets/images/icons/logo.png" alt="Vintage Clothing & Thrift Boutique Logo" class="auth-logo-img"
+            width="48" height="48">
+          <div class="auth-brand-text">
+            <span class="auth-brand-title">VINTAGE</span>
+            <span class="auth-brand-subtitle">Clothing &amp; Thrift Boutique</span>
+          </div>
+        </a>
+        <p class="auth-brand-desc">Curated Relics of Timeless Expression</p>
+      </div>
+
+      <div class="auth-modal-tabs">
+        <button type="button" class="auth-tab-btn active" id="tab-login-btn">Sign In</button>
+        <button type="button" class="auth-tab-btn" id="tab-register-btn">Create Account</button>
+      </div>
+
+      <!-- Login Form -->
+      <form class="auth-form" id="form-login">
+        <div class="form-group">
+          <label class="form-label" for="login-email">Email Address</label>
+          <input type="email" id="login-email" required class="form-input" placeholder="vintage@example.com">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="login-password">Password</label>
+          <input type="password" id="login-password" required class="form-input" placeholder="••••••••">
+        </div>
+        <div class="form-options-row">
+          <label class="form-checkbox-label">
+            <input type="checkbox" name="remember">
+            <span>Remember me</span>
+          </label>
+          <a href="#" class="forgot-link">Forgot password?</a>
+        </div>
+        <button type="submit" class="auth-submit-btn">Sign In to Boutique</button>
+      </form>
+
+      <!-- Register Form -->
+      <form class="auth-form" id="form-register" style="display: none;">
+        <div class="form-group">
+          <label class="form-label" for="reg-name">Full Name</label>
+          <input type="text" id="reg-name" required class="form-input" placeholder="Eleanor Vance">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="reg-email">Email Address</label>
+          <input type="email" id="reg-email" required class="form-input" placeholder="vintage@example.com">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="reg-password">Password</label>
+          <input type="password" id="reg-password" required class="form-input" placeholder="Create secure password">
+        </div>
+        <button type="submit" class="auth-submit-btn">Register New Account</button>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- Shared External JavaScript (Zero inline JS) -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
