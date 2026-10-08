@@ -53,6 +53,11 @@
   
   --header-height: 68px;
   --transition-smooth: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Unified Layout & Alignment Tokens */
+  --container-max-width: 1180px;
+  --container-padding-x: 1.5rem;
+  --header-btn-height: 38px;
 }
 
 /* ==========================================================================
@@ -172,14 +177,14 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   outline-offset: 3px;
 }
 
-/* Container */
+/* Container - Strict balanced alignment across all pages */
 .site-container {
   width: 100%;
-  max-width: 1180px;
+  max-width: var(--container-max-width);
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: var(--container-padding-x);
+  padding-right: var(--container-padding-x);
 }
 
 /* ==========================================================================
@@ -467,16 +472,22 @@ html.dark .dropdown-item:hover, html.dark .dropdown-item.active {
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 0.85rem;
+  gap: 0.65rem;
   flex-shrink: 0;
 }
 
+/* Base Header Action Buttons - Exactly Identical Height & Radius */
 .ctrl-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 38px;
-  height: 38px;
+  width: var(--header-btn-height);
+  min-width: var(--header-btn-height);
+  height: var(--header-btn-height);
+  min-height: var(--header-btn-height);
+  max-height: var(--header-btn-height);
+  box-sizing: border-box;
+  padding: 0;
   border-radius: 8px;
   border: 1.5px solid var(--border-light);
   background-color: var(--bg-card);
@@ -484,6 +495,7 @@ html.dark .dropdown-item:hover, html.dark .dropdown-item.active {
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  flex-shrink: 0;
 }
 
 .ctrl-btn:hover {
@@ -519,24 +531,55 @@ html.dark .ctrl-btn:hover {
   letter-spacing: 0.06em;
 }
 
-/* Header Login Button */
-.header-login-btn {
+/* Header Primary Buying CTA Button - Exactly Same Height as RTL & Theme Buttons */
+.header-primary-cta,
+.header-buy-btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  height: var(--header-btn-height);
+  min-height: var(--header-btn-height);
+  max-height: var(--header-btn-height);
+  box-sizing: border-box;
+  padding: 0 1.25rem;
   gap: 0.5rem;
-  background-color: var(--btn-primary-bg);
-  color: var(--btn-primary-text);
-  font-size: 0.825rem;
-  font-weight: 600;
+  border-radius: 8px;
+  border: 1.5px solid var(--color-warm-brown);
+  background-color: var(--color-warm-brown);
+  color: #FFFFFF !important;
+  font-size: 0.835rem;
+  font-weight: 700;
   letter-spacing: 0.04em;
-  padding: 0.5rem 1.15rem;
-  border-radius: 4px;
-  transition: var(--transition-smooth);
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(149, 110, 87, 0.25);
 }
 
-.header-login-btn:hover {
-  background-color: var(--btn-primary-hover);
-  transform: translateY(-1px);
+.header-primary-cta:hover,
+.header-buy-btn:hover {
+  background-color: var(--color-deep-brown);
+  border-color: var(--color-deep-brown);
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(97, 70, 53, 0.35);
+}
+
+html.dark .header-primary-cta,
+html.dark .header-buy-btn {
+  background-color: var(--color-warm-brown);
+  border-color: #E6BE8A;
+  color: #FFFFFF !important;
+}
+
+html.dark .header-primary-cta:hover,
+html.dark .header-buy-btn:hover {
+  background-color: #A87E65;
+  border-color: #FFFFFF;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 14px rgba(230, 190, 138, 0.35);
 }
 
 /* Mobile Menu Toggle Button */
@@ -821,18 +864,35 @@ html.dark .mobile-actions-row .ctrl-btn:hover {
   border-color: #FFFFFF !important;
 }
 
-.mobile-login-btn {
+.mobile-primary-cta,
+.mobile-buy-btn {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  padding: 0.75rem;
-  background-color: var(--btn-primary-bg);
-  color: #FFFFFF;
-  border-radius: 4px;
-  font-weight: 600;
-  font-size: 0.9rem;
+  gap: 0.55rem;
+  padding: 0.85rem;
+  background-color: var(--color-warm-brown);
+  color: #FFFFFF !important;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.925rem;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(149, 110, 87, 0.25);
+}
+
+.mobile-primary-cta:hover,
+.mobile-buy-btn:hover {
+  background-color: var(--color-deep-brown);
+  color: #FFFFFF !important;
+}
+
+html.dark .mobile-primary-cta,
+html.dark .mobile-buy-btn {
+  background-color: var(--color-warm-brown);
+  color: #FFFFFF !important;
 }
 
 /* ==========================================================================
@@ -991,12 +1051,13 @@ html.dark .mobile-actions-row .ctrl-btn:hover {
   font-size: 0.85rem;
   color: var(--text-muted);
   gap: 2rem;
-  padding-right: 4.5rem;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 [dir="rtl"] .footer-bottom {
   padding-right: 0;
-  padding-left: 4.5rem;
+  padding-left: 0;
 }
 
 .footer-bottom > div:first-child,
@@ -2266,7 +2327,7 @@ html.dark .consignment-btn:hover span {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 5rem 1.5rem;
+  padding: 5rem 0;
   background-color: var(--color-deep-brown);
   color: #FFFFFF;
   overflow: hidden;
@@ -2339,27 +2400,90 @@ html.dark .consignment-btn:hover span {
 .vault-hero-actions {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 1.25rem;
   flex-wrap: wrap;
 }
 
-.btn-outline-vault {
+/* Home 2 Hero Button Consistency - Exactly Matched 48px Height */
+.vault-hero-actions .btn-primary-hero,
+.vault-hero-actions .btn-outline-vault,
+.vault-hero-actions .btn-secondary-vault {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  border: 1px solid #FDEDEE;
-  color: #FDEDEE;
+  justify-content: center;
+  height: 48px;
+  min-height: 48px;
+  box-sizing: border-box;
+  padding: 0 1.85rem;
   font-size: 0.925rem;
   font-weight: 600;
-  padding: 0.85rem 1.75rem;
-  border-radius: 4px;
   letter-spacing: 0.03em;
-  transition: var(--transition-smooth);
+  border-radius: 6px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  white-space: nowrap;
 }
 
-.btn-outline-vault:hover {
-  background-color: #FDEDEE;
-  color: var(--color-deep-brown);
+.vault-hero-actions .btn-primary-hero {
+  background-color: var(--btn-primary-bg);
+  border: 1.5px solid var(--btn-primary-bg);
+  color: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(79, 59, 80, 0.25);
+}
+
+.vault-hero-actions .btn-primary-hero:hover {
+  background-color: var(--btn-primary-hover);
+  border-color: var(--btn-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(79, 59, 80, 0.35);
+}
+
+/* Secondary CTA - Rich Secondary Warm Brown Color & Matched Size */
+.vault-hero-actions .btn-outline-vault,
+.vault-hero-actions .btn-secondary-vault {
+  background-color: var(--color-warm-brown);
+  border: 1.5px solid var(--color-warm-brown);
+  color: #FFFFFF !important;
+  box-shadow: 0 2px 8px rgba(149, 110, 87, 0.22);
+}
+
+.vault-hero-actions .btn-outline-vault:hover,
+.vault-hero-actions .btn-secondary-vault:hover {
+  background-color: var(--color-deep-brown);
+  border-color: var(--color-deep-brown);
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(97, 70, 53, 0.4);
+}
+
+/* Dark Mode Contrast Optimization - High Contrast AAA Hover */
+html.dark .vault-hero-actions .btn-primary-hero {
+  background-color: var(--btn-primary-bg);
+  border-color: rgba(255, 255, 255, 0.25);
+  color: #FFFFFF !important;
+}
+
+html.dark .vault-hero-actions .btn-primary-hero:hover {
+  background-color: var(--btn-primary-hover);
+  border-color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(255, 255, 255, 0.25);
+}
+
+html.dark .vault-hero-actions .btn-outline-vault,
+html.dark .vault-hero-actions .btn-secondary-vault {
+  background-color: var(--color-warm-brown);
+  border-color: #E6BE8A;
+  color: #FFFFFF !important;
+}
+
+html.dark .vault-hero-actions .btn-outline-vault:hover,
+html.dark .vault-hero-actions .btn-secondary-vault:hover {
+  background-color: #3D2C20 !important;
+  border-color: #FFFFFF !important;
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.25);
 }
 
 /* Section 2: Diptych Dual-Focus Spread */
@@ -3287,7 +3411,7 @@ html.dark .conservation-spec-pill {
 /* Section 6: Mandatory Final CTA Section */
 .about-cta-section {
   position: relative;
-  padding: 6.5rem 1.5rem;
+  padding: 6.5rem 0;
   background-color: var(--color-plum-accent);
   color: #FFFFFF;
   text-align: center;
@@ -3835,7 +3959,7 @@ html.dark .drops-section {
 /* Section 6: Mandatory Final CTA Section */
 .shop-cta-section {
   position: relative;
-  padding: 6.5rem 1.5rem;
+  padding: 6.5rem 0;
   background-color: var(--color-deep-brown);
   color: #FFFFFF;
   text-align: center;
@@ -4331,7 +4455,7 @@ html.dark .payout-amount {
 /* Section 6: Mandatory Final CTA Section */
 .sell-cta-section {
   position: relative;
-  padding: 6.5rem 1.5rem;
+  padding: 6.5rem 0;
   background-color: var(--color-deep-brown);
   color: #FFFFFF;
   text-align: center;
@@ -4965,7 +5089,7 @@ html.dark .capsule-section {
 /* Section 6: Mandatory Final CTA Section */
 .styling-cta-section {
   position: relative;
-  padding: 6.5rem 1.5rem;
+  padding: 6.5rem 0;
   background-color: var(--color-plum-accent);
   color: #FFFFFF;
   text-align: center;
@@ -5618,7 +5742,7 @@ html.dark .neighborhood-section {
 /* Section 6: Mandatory Final CTA Section */
 .contact-cta-section {
   position: relative;
-  padding: 6.5rem 1.5rem;
+  padding: 6.5rem 0;
   background-color: var(--color-deep-brown);
   color: #FFFFFF;
   text-align: center;
